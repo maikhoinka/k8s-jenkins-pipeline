@@ -12,7 +12,7 @@ pipeline {
 				checkout scm
 			}
 		}
-		stage('Build Docker Imaage') {
+		stage('Build Docker Image') {
 			steps {
 				echo "Starting to build image: ${DOCKER_IMAGE}:${IMAGE_TAG}..."
 				sh "docker build -t ${DOCKER_IMAGE}:${IMAGE_TAG} ."
